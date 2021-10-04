@@ -1,13 +1,13 @@
 # Application Name: Edu-X
 
 ## Live Site
-https://doctime-by-maruf.netlify.app/  
+https://project-edu-x-maruf.netlify.app/
 
 
 ## About Project
-* This application is for selecting developer for make annual fund for charity
-* This application calculated total fund of doctor's
-* This application will show how many people give money.
+* In this website you can find wold's best course
+* Here you be teach by MIT , Harvard Graduates.
+* Home section in website you can fine teachers and courses
 
 
 ## Tools

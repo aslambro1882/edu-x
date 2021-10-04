@@ -11,7 +11,7 @@ const Courses = () => {
     }, [])
 
     return (
-        <Row md={2} lg={4} className="g-4 w-75 mx-auto">
+        <Row xs={1} md={2} lg={4} className="g-4 w-75 mx-auto">
             {
                 courses.map(course => <Course
                     key={course._id}

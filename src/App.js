@@ -11,6 +11,7 @@ import NotFound from './components/NotFound/NotFound';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCrown } from '@fortawesome/free-solid-svg-icons';
 import { createContext } from 'react';
+import ContactUS from './components/ContactUS/ContactUS';
 
 export const PremiumContext = createContext()
 
@@ -35,6 +36,9 @@ function App() {
           </Route>
           <Route path='/about'>
             <AboutUS></AboutUS>
+          </Route>
+          <Route path="/contact">
+            <ContactUS></ContactUS>
           </Route>
           <Route path="*">
             <NotFound></NotFound>

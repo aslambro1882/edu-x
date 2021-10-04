@@ -3,10 +3,7 @@ import Teachers from '../Teachers/Teachers';
 import './Home.css'
 
 const Home = () => {
-    for (let i = 0; i <= 4; i++) {
-        <Courses></Courses>
-    }
-    const number = 4;
+
 
 
     return (
@@ -17,12 +14,11 @@ const Home = () => {
                 <p className="bg-white rounded-3 p-2 fw-bold">You can learn here from best Teacher</p>
             </div>
             <div>
-                <h2>Our Courses</h2>
-
-                {number ? <Courses></Courses> : 0}
+                <h2 className="bg-dark text-white p-3">Our Courses</h2>
+                <Courses></Courses>
             </div>
             <div>
-                <h2>Out Teacher</h2>
+                <h2 className="bg-dark text-white p-3">Out Teacher</h2>
                 <Teachers></Teachers>
             </div>
 

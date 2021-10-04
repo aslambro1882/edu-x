@@ -25,6 +25,7 @@ const Footer = () => {
                     <Link to="./courses"><Button variant="outline-warning" className="mx-2">Courses</Button></Link>
                     <Link to="./teacher"><Button variant="outline-warning" className="mx-2">Teacher</Button></Link>
                     <Link to="./about"><Button variant="outline-warning" className="mx-2">About US</Button></Link>
+                    <Link to="./contact"><Button variant="outline-warning" className="mx-2">Contact US</Button></Link>
                 </div>
             </div>
         </div>

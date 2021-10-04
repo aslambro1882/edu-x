@@ -10,7 +10,7 @@ const Teachers = () => {
             .then(data => setTeachers(data))
     }, [])
     return (
-        <Row md={3} lg={4} className="g-3 w-75 mx-auto h-100">
+        <Row xs={1} md={3} lg={4} className="g-3 w-75 mx-auto h-100">
             {
                 teachers.map(teacher => <Teacher
                     key={teacher._id}
