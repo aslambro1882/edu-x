@@ -1,10 +1,9 @@
 import React from 'react';
 import { Col, Row } from 'react-bootstrap';
-import './AboutUS.css'
 
 const AboutUS = () => {
     return (
-        <div className="d-flex my-5 full-view container ">
+        <div className="d-flex my-5 container ">
             <Row xs={1} md={2}>
                 <Col className="d-flex align-items-center justify-content-center">
                     <img className="img-fluid" src="https://image.freepik.com/free-vector/young-programmer-businessman-freelance-working-desk-with-laptop_40876-2661.jpg" alt="" />

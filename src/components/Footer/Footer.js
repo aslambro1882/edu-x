@@ -1,7 +1,6 @@
 import { faFacebook, faInstagram, faLinkedin } from '@fortawesome/free-brands-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React from 'react';
-import { Button } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import './Footer.css'
 
@@ -20,6 +19,7 @@ const Footer = () => {
                         <p className="text-white fs-2 ms-2">{facebook}</p>
                         <p className="text-white fs-2 ms-2">{link}</p>
                     </div>
+                    <small className="text-white">© Copyright | Maruf 2021</small>
                 </div>
                 <div>
                     <Link className="text-white ms-2" to="/home">Home</Link>

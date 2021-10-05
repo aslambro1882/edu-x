@@ -1,6 +1,7 @@
 import React from 'react';
 import { Card, Col } from 'react-bootstrap';
 
+
 const TeacherReview = (props) => {
     const { teacher } = props;
     const { insImg, Instructor, Degree } = teacher;
@@ -8,7 +9,7 @@ const TeacherReview = (props) => {
         <div className='my-5'>
             <Col>
                 <Card>
-                    <Card.Img className='rounded-circle p-5' variant="top" src={insImg} height="220px" />
+                    <Card.Img className='rounded-circle p-5 img-size' variant="top" src={insImg} height="220px" />
                     <Card.Body>
                         <Card.Title className='text-center'>{Instructor}</Card.Title>
                         <Card.Text className='text-center'>{Degree}</Card.Text>

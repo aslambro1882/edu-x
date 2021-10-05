@@ -1,4 +1,3 @@
-import './App.css';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import Courses from './components/Courses/Courses';
 import Header from './components/Header/Header';
@@ -33,6 +32,7 @@ function App() {
           <Route path='/courses'>
             <Courses />
           </Route>
+          {/* Using Dynamic Routing */}
           <Route path='/course/:courseId'>
             <CourseDetails />
           </Route>
