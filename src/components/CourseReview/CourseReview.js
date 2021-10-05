@@ -1,26 +1,21 @@
 import { faClock, faComment, faThumbsDown, faThumbsUp } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React, { useContext } from 'react';
-import { Button, Card, Col } from 'react-bootstrap';
-import { Link } from 'react-router-dom';
+import { Card, Col } from 'react-bootstrap';
 import { PremiumContext } from '../../App';
 
-const Course = (props) => {
+const CourseReview = (props) => {
     const { course } = props;
-    const { _id, img, description, course_name, duration, likes, dislikes, comments } = course;
+    const { img, description, course_name, duration, likes, dislikes, comments } = course;
 
     const time = <FontAwesomeIcon icon={faClock} />
     const like = <FontAwesomeIcon icon={faThumbsUp} />
     const dislike = <FontAwesomeIcon icon={faThumbsDown} />
     const comment = <FontAwesomeIcon icon={faComment} />
 
-    // Using Contex Api
     const premium = useContext(PremiumContext)
-
-    const url = `/course/${_id}`
     return (
-        <div>
-            {/* Cards Here */}
+        <div className="my-5">
             <Col>
                 <Card>
                     <Card.Img variant="top" src={img} height="300px" />
@@ -36,7 +31,6 @@ const Course = (props) => {
                             <p>{dislike} {dislikes}</p>
                             <p>{comment} {comments}</p>
                         </Card.Text>
-                        <Card.Text className="text-center"><Link to={url}><Button>See Details</Button></Link></Card.Text>
                     </Card.Body>
                 </Card>
             </Col>
@@ -44,4 +38,4 @@ const Course = (props) => {
     );
 };
 
-export default Course;
+export default CourseReview;

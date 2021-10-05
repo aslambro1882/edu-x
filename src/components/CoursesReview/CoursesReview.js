@@ -1,29 +1,27 @@
 import React, { useEffect, useState } from 'react';
 import { Row } from 'react-bootstrap';
-import Course from '../Course/Course';
+import CourseReview from '../CourseReview/CourseReview';
 
-const Courses = () => {
-    // Data loading from JSON
-    const [courses, setCourses] = useState([])
+const CoursesReview = () => {
+    const [coursesReview, setCoursesReview] = useState([])
     useEffect(() => {
         fetch('./fakedata.JSON')
             .then(res => res.json())
-            .then(data => setCourses(data))
+            .then(data => setCoursesReview(data.slice(0, 4)))
     }, [])
-
     return (
-        // Using React Boostrap Cards 
-        <div className="container my-5">
+        <div className="container">
             <Row xs={1} md={2} lg={4} className="g-4">
                 {
-                    courses.map(course => <Course
+                    coursesReview.map(course => <CourseReview
                         key={course._id}
                         course={course}
-                    ></Course>)
+                    ></CourseReview>)
                 }
             </Row>
         </div>
     );
 };
 
-export default Courses;
+
+export default CoursesReview;

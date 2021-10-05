@@ -1,28 +1,26 @@
 import React, { useEffect, useState } from 'react';
 import { Row } from 'react-bootstrap';
-import Teacher from '../Teacher/Teacher';
+import TeacherReview from '../TeacherReview/TeacherReview';
 
-const Teachers = () => {
-    // Loading Data From JSON
-    const [teachers, setTeachers] = useState([])
+const TeachersReview = () => {
+    const [teachersReview, setTeachersReview] = useState([])
     useEffect(() => {
         fetch('./fakedata.JSON')
             .then(res => res.json())
-            .then(data => setTeachers(data))
+            .then(data => setTeachersReview(data.slice(0, 6)))
     }, [])
     return (
-        // Using React Boostrap Card
-        <div className="container my-5">
+        <div className="container">
             <Row xs={1} md={3} lg={6} className="g-3">
                 {
-                    teachers.map(teacher => <Teacher
+                    teachersReview.map(teacher => <TeacherReview
                         key={teacher._id}
                         teacher={teacher}
-                    ></Teacher>)
+                    ></TeacherReview>)
                 }
             </Row>
         </div>
     );
 };
 
-export default Teachers;
+export default TeachersReview;

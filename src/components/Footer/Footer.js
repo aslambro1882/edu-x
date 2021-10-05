@@ -6,11 +6,12 @@ import { Link } from 'react-router-dom';
 import './Footer.css'
 
 const Footer = () => {
+    // Declaring Icons
     const insta = <FontAwesomeIcon icon={faInstagram}></FontAwesomeIcon>
     const facebook = <FontAwesomeIcon icon={faFacebook}></FontAwesomeIcon>
     const link = <FontAwesomeIcon icon={faLinkedin}></FontAwesomeIcon>
     return (
-        <div className="footer">
+        <div className="">
             <div className="bg-dark d-flex justify-content-around p-3">
                 <div>
                     <h2 className="text-white">Follow Us on social Media</h2>
@@ -21,11 +22,11 @@ const Footer = () => {
                     </div>
                 </div>
                 <div>
-                    <Link to="./home"><Button variant="outline-warning" className="mx-2">Home</Button></Link>
-                    <Link to="./courses"><Button variant="outline-warning" className="mx-2">Courses</Button></Link>
-                    <Link to="./teacher"><Button variant="outline-warning" className="mx-2">Teacher</Button></Link>
-                    <Link to="./about"><Button variant="outline-warning" className="mx-2">About US</Button></Link>
-                    <Link to="./contact"><Button variant="outline-warning" className="mx-2">Contact US</Button></Link>
+                    <Link className="text-white ms-2" to="/home">Home</Link>
+                    <Link className="text-white ms-2" to="/courses">Courses</Link>
+                    <Link className="text-white ms-2" to="/teacher">Teachers</Link>
+                    <Link className="text-white ms-2" to="/about">About US</Link>
+                    <Link className="text-white ms-2" to="/contact">Contact US</Link>
                 </div>
             </div>
         </div>

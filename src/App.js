@@ -1,6 +1,5 @@
 import './App.css';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
-import Col from './components/Home/Home';
 import Courses from './components/Courses/Courses';
 import Header from './components/Header/Header';
 import Footer from './components/Footer/Footer';
@@ -12,39 +11,45 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCrown } from '@fortawesome/free-solid-svg-icons';
 import { createContext } from 'react';
 import ContactUS from './components/ContactUS/ContactUS';
+import CourseDetails from './components/CourseDetails/CourseDetails';
 
+// Declaring Context APi
 export const PremiumContext = createContext()
 
 function App() {
   const premium = <FontAwesomeIcon icon={faCrown} />
   return (
     <PremiumContext.Provider value={premium}>
+      {/* Using React Router */}
       <Router>
-        <Header></Header>
+        <Header />
         <Switch>
           <Route exact path='/'>
-            <Col></Col>
+            <Home />
           </Route>
           <Route exact path='/home'>
-            <Home></Home>
+            <Home />
           </Route>
           <Route path='/courses'>
-            <Courses></Courses>
+            <Courses />
           </Route>
-          <Route path='/teachers'>
-            <Teachers></Teachers>
+          <Route path='/course/:courseId'>
+            <CourseDetails />
+          </Route>
+          <Route path='/teacher'>
+            <Teachers />
           </Route>
           <Route path='/about'>
-            <AboutUS></AboutUS>
+            <AboutUS />
           </Route>
           <Route path="/contact">
-            <ContactUS></ContactUS>
+            <ContactUS />
           </Route>
           <Route path="*">
-            <NotFound></NotFound>
+            <NotFound />
           </Route>
         </Switch>
-        <Footer></Footer>
+        <Footer />
       </Router>
     </PremiumContext.Provider>
   );
